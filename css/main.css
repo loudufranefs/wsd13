@@ -2,9 +2,9 @@
 Color Swatch
 
 	Barossa: 45002f
-	Blackberry: 680047 rgba (60, 0, 40, 0.5)
+	Blackberry: 680047 rgba(60, 0, 40, 0.5)
 	Jungle Mist: a1c6ca  rgba(161, 192, 202, 0.5)
-	Ziggurat: b1d7da    rgba (10, 0, 40, 0.5)
+	Ziggurat: b1d7da    rgba(10, 0, 40, 0.5)
 	Eggplant: 684A5C
 	Don Juan: 5e4f58
 	Fair Pink: ffefec
@@ -13,32 +13,21 @@ Color Swatch
 */
 
 body {
-	background-color: #ffefec;
-	background-image: url("../images/bg_flower.png"), url("../images/ricepaper.png");
-	background-position: 110% 140%, top left;
-	background-repeat: no-repeat, repeat;
-	background-attachment: fixed;
+	background: url("../images/bg_flower.png") 110% 140% no-repeat fixed, #ffefec url("../images/ricepaper.png") top left fixed;
 	color: #5e4f58;
-	font-family: 'Open Sans', Arial, sans-serif;
-	font-size: 16px;
+	font: 16px'Open Sans', Arial, sans-serif; /* based on browser default font-size - 16px */
 	line-height: 1.5;
 	margin: 0px;
 	padding: 0px;
 }
 
 
-
-
-
 /* Lists -------------------------------------*/
 
 ul, li {
-	padding: 0px; /*reset padding*/
-	margin: 0px; /*reset margins*/
+	padding: 0; /*reset padding*/
+	margin: 0; /*reset margins*/
 }
-
-
-
 
 /* Links -------------------------------------*/
 
@@ -61,20 +50,21 @@ a:active {
 
 
 /* Typography -------------------------------------*/
+
 h1, h2, h3 {
 	font-family: 'Lobster', cursive;
 	font-weight: normal;
 	color: #684A5C;
 }
 section h3 {
-	font-size: 2em;
+	font-size: 2em; /* 32px */
 	background-color: rgba(255, 255, 255, 0.2);
 	border-bottom: 5px solid rgba(255, 255, 255, 0.4);
-	padding: 20px 10px;
+	padding: 0.625em 0.3125em; /* 30px 10px */
 }
 section h3 small {
 	font-family: 'Open Sans', Arial, sans-serif;
-	font-size: 0.5em;
+	font-size: 0.5em; /* 16px /32px */
 	color: #5e4f58;
 	text-transform: uppercase;
 }
@@ -88,34 +78,29 @@ section h3 small:before {
 /* Layout -------------------------------------*/
 
 .container {
-	max-width: 960px;
+	max-width: 930px; /* 960px includes padding */
 	margin: auto;
-	padding: 30px 0px;
+	padding: 3.125%; /* 30px */
 }
-.articles {
-	width: 590px;
-	float: left;
-	padding: 10px;
-}
+
 .clearfix {
 	clear: both;
+
 }
-
-
 
 /* Header -------------------------------------*/
 
 #header {
 	background: #a1c6ca;
-	height: 50px;
+	min-height: 50px;
 }
 #logo {
 	float: left;
-	width: 100px;
+	min-width: 100px; /* turning this into a percentage doesn't make sense */
 	height: 100px;
-	margin-left: 10px;
+	margin-left: 1.041666666667%; /* 10px */
 	overflow: hidden;
-	text-indent: -9999px;
+	text-indent: -9999em;
 	background: url("../images/logo.png") no-repeat top left;
 }
 
@@ -127,20 +112,20 @@ section h3 small:before {
 nav ul {
 	list-style: none;
 	float: right;
-	width: 500px;
+	width: 52.0833%; /* 500px */
 }
 nav ul li {
 	display: inline;
 }
 nav ul li a:link {
+	float: left;
+	padding: 0 2%; /* 10px */
 	color: #293233;
 	text-transform: uppercase;
-	font-size: 0.8em;
+	font-size: 0.875em; /* 14px*/ 
 	font-weight: bold;
-	height: 50px;
-	padding: 0px 10px;
-	line-height: 50px;
-	float: left;
+	line-height: 3.57142857142857em; /* 50px*/
+	
 }
 nav ul li a:hover {
 	color: #680047;
@@ -155,62 +140,59 @@ nav ul li a:hover {
 
 #cta {
 	background: #b1d7da url("../images/bg_pattern_transparent.png") repeat top center;
-	border-bottom: 10px solid #eddedb;
-	box-shadow: 0px 0px 15px rgba(120, 120, 120, 0.5);
-	-webkit-box-shadow: 0px 0px 15px rgba(120, 120, 120, 0.5);
-	-moz-box-shadow: 0px 0px 15px rgba(120, 120, 120, 0.5);
-	-ms-box-shadow: 0px 0px 15px rgba(120, 120, 120, 0.5);
+	border-bottom: 0.5em solid #eddedb;
+	-webkit-box-shadow: 0 0 0.5em rgba(120, 120, 120, 0.5); /* older mobile Safari */
+	box-shadow: 0 0 0.5em rgba(120, 120, 120, 0.5);
 }
 #cta h1 {
+	font-size: 1.5em; /* 24px*/
 	text-align: center;
-	line-height: 3em;
+	line-height: 3em; /* 72px */
 	color: #342b30;
 }
 #cta h1 span {
-	font-size: 6em;
+	font-size: 6em; /* 144px */
 	color: #680047;
-	text-shadow: 2px 2px 3px #fff;
-	-webkit-text-shadow: 2px 2px 3px #fff;/* Safari and Chrome */
-	-moz-text-shadow: 2px 2px 3px #fff; /* Mozilla */
-	-ms-text-shadow: 2px 2px 3px #fff; /* Internet Explorer */
+	text-shadow: 0.01388888888889em 0.01388888888889em 0.020833em #fff; /* 2px 2px 3px */
 }
 #cta h1 small {
-	font-size: 2em;
+	font-size: 2em; /* 48px */
 	display: block;
 	text-decoration: underline;
 }
 .ctaButton {
-	width: 150px;
+	width: 16.129032258065%; /*150px */
 	height: 150px;
 	margin: auto;
 }
-.ctaButton a:link {
+
+.ctaButton a, .ctaButton a:link {
+	position:relative;
 	float: left;
-	width: 147px;
-	height: 147px;
-	line-height: 150px;
+	width: 98%; /*147px */
+	height: 98%; /*147px */
+	color: #ffefec;
+	font-size: 2em; /* 32px */
+	line-height: 4.6875em; /* 150px; */
 	text-align: center;
 	background-color: #680047;
-	-moz-border-radius: 180px;
-	-webkit-border-radius: 180px;
-	-ms-border-radius: 180px;
-	border-radius: 180px;
-	border: 3px solid #ffefec;
-	color: #ffefec;
-	font-size: 32px;
-	transition: width 0.5s linear, margin 0.5s linear;
-	-webkit-transition: width 0.5s linear, margin 0.5s linear;/* Safari and Chrome */
-	-moz-webkit-transition: width 0.5s linear, margin 0.5s linear;/* Mozilla */
-	-ms-webkit-transition: width 0.5s linear, margin 0.5s linear;/* Internet Explorer */
-	box-shadow: 0px 0px 10px #fff;
-	-webkit-box-shadow: 0px 0px 10px #fff;/* Safari and Chrome */
-	-moz-box-shadow: 0px 0px 10px #fff; /* Mozilla */
-	-ms-box-shadow: 0px 0px 10px #fff; /* Internet Explorer */
+	-webkit-border-radius: 100%; /* older safari */
+	-o-border-radius: 100%; /* opera */
+	border-radius: 100%;
+	border: 0.2em solid #ffefec; /* 3px */
+	-webkit-transition: all 0.5s ease-in-out;  /* Safari and Chrome */
+	-ms-transition: all 0.5s ease-in-out; /* Internet Explorer */
+	transition: width 0.5s ease-in-out, margin 0.5s linear;
+	-webkit-box-shadow: 0 0 10.6802721088435em #fff;/* Safari and Chrome */
+	box-shadow: 0 0 0.6802721088435em #fff; /* 10px */
 }
 .ctaButton a:hover {
 	text-decoration: none;
-	margin-left: -15px;
-	width: 180px;
+	margin-left: -8.333333333333%; /* 15px */
+	margin-top: -8.333333333333%; /* 15px */
+	width: 120%; /*180px */;
+	height: 120%; /*180px */;
+	line-height: 5.625em; /* 150px; */
 	background-color: #45002f;
 }
 
@@ -219,38 +201,40 @@ nav ul li a:hover {
 
 /* About -------------------------------------*/
 #about h2 {
-	font-size: 5em;
+	font-size: 5em; /* 80px*/
 	font-weight: bold;
 	line-height: 0.5em; /*decreasing line height for better balance*/
 	color: #680047;
-	text-shadow: 2px 2px 0px #ff6ad0;
-	-webkit-text-shadow: 2px 2px 0px #ff6ad0;/* Safari and Chrome */
-	-moz-text-shadow: 2px 2px 0px #ff6ad0; /* Mozilla */
-	-ms-text-shadow: 2px 2px 0px #ff6ad0; /* Internet Explorer */
+	text-shadow: 0.025em 0.025em 0 #ff6ad0;
 }
 img.profilephoto {
-	width: 200px;
 	float: right;
-	border-radius: 360px;
-	-moz-border-radius: 360px;/* Mozilla */
-	-webkit-border-radius: 360px;/* Safari and Chrome */
-	-ms-border-radius: 360px;/* Internet Explorer */
-	border: 10px solid #b1d7da;
-	box-shadow: 5px 5px 1px #a1c6ca;
-	-webkit-box-shadow: 5px 5px 1px #a1c6ca;/* Safari and Chrome */
-	-moz-box-shadow: 5px 5px 1px #a1c6ca; /* Mozilla */
-	-ms-box-shadow: 5px 5px 1px #a1c6ca; /* Internet Explorer */
+	width: 21.505376344086%; /* 200px */
+	-webkit-border-radius: 100%;
+	-o-border-radius: 100%;
+	border-radius: 100%;
+	border:  0.5em solid #b1d7da;
+	-webkit-box-shadow: 0.25em 0.25em 0 #a1c6ca;
+	box-shadow: 0.25em 0.25em 0 #a1c6ca;
 }
-
 #about p {
 	/*This does not make sense for this paragraph, however, it is listed in the rubric for this week.*/
 	-moz-column-count:3;
-	-moz-column-gap:20px;
+	-webkit-column-count:3;
+	column-count:3;
+	-moz-column-gap: 2em;
+	-webkit-column-gap: 2em;
+	column-gap: 2em; 
 }
 
 
 
 /* Article -------------------------------------*/
+.articles {
+	width: 63.440860215054%;/* 590px / 930px  final width is 610px */
+	float: left;
+	padding: 1.041666666667%; /* 10px / 610 px */
+}
 
 article {
 	clear: both;
@@ -260,9 +244,9 @@ article h4 {
 	text-transform: uppercase;
 }
 article p {
-	margin-left: 50px;
-	border-left: 10px solid #eedfdc;
-	padding: 5px 30px;
+	margin-left: 8.474576271186% ;  /* 50px */
+	border-left: 0.8474576271186em solid #eedfdc; /* 50px */
+	padding: 0.847457627119% 5.0847457627119%; /* 5px 30px */
 }
 article footer {
 	padding-bottom: 30px;
@@ -272,12 +256,15 @@ article footer a:link {
 	float: right;
 	background: #680047;
 	color: #ffefec;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-ms-border-radius: 10px;
-	border-radius: 10px;
-	padding: 3px 10px;
+	-webkit-border-radius: 1em;
+	-o-border-radius: 1em;
+	border-radius: 1em;
+	padding: 0.847457627119% 1.694915254238%;
 }
+article footer a:visited {
+	color: #ffefec;
+}
+
 article footer a:hover {
 	background: #000;
 	text-decoration: none;
@@ -288,17 +275,18 @@ article footer a:hover {
 
 /* aside -------------------------------------*/
 
+
 aside {
-	margin-left: 30px;
-	width: 300px;
 	float: right;
+	width: 31.182795698925% ; /* 290px final width is 320px */
+	margin-left: 1.041666666667%; /* 10px */
+	-webkit-border-radius: 0.33em; /* 10px */
+	-o-border-radius: 0.33em; /* 10px */
+	border-radius: 0.33em; /* 10px */
+	padding: 1.041666666667%; /* 10px */
 	background-color: #a1c6ca;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-ms-border-radius: 10px;
-	border-radius: 10px;
-	padding: 10px;
 }
+
 aside h4 {
 	color: #fff;
 	text-transform: uppercase;
@@ -314,12 +302,11 @@ aside ul li {
 	background-color: #fff;
 	color: #354243;
 	font-size: 0.9em;
-	padding: 5px;
-	margin: 2px;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-ms-border-radius: 5px;
+	padding: 1.8965517241379%;
+	margin: 0.689655172414%;
+	-webkit-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	border-radius: 0.5em;
 }
 
 
@@ -329,55 +316,55 @@ aside ul li {
 #portfolio {
 	background-color: #b1d7da;
 	background-image: url("../images/bg_pattern_lighter.png");
-	transition: background-color 1s ease-in;
-	-moz-transition: background-color 1s ease-in;
 	-webkit-transition: background-color 1s ease-in;
 	-ms-transition: background-color 1s ease-in;
+	transition: background-color 1s ease-in;
 }
 #portfolio:hover {
 	background-color: #a1c6ca;
 }
 #portfolio ul {
 	list-style: none;
-	width: 880px;
+	width: 94.623655913978%; /*880px*/
 	margin: auto;
 }
 #portfolio ul li {
 	float: left;
+	display: inline-block;
+	width: 22.727272727273%; /* 190px with final 200px includes margins */
+	height: 131px;
+	overflow:hidden;
+	margin: 1.1%;
+	padding:0;
 }
 #portfolio ul li a {
 	float: left;
-	display: block;
-	width: 200px;
-	height: 131px;
-	border: 5px solid #fff;
+	width:96%;
+	max-height:94%;
+	overflow:hidden;
+	border: 0.25em solid #fff;
 	outline: 0;
-	box-shadow: 0px 0px 5px rgba(0,0,0, 0.4);
-	-moz-box-shadow: 0px 0px 5px rgba(0,0,0, 0.4);
-	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0, 0.4);
-	-ms-box-shadow: 0px 0px 5px rgba(0,0,0, 0.4);
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-ms-border-radius: 5px;
-	margin: 5px;
-	transition: box-shadow 0.5s;
-	-moz-transition: box-shadow 0.5s;
-	-webkit-transition: box-shadow 0.5s;
-	-ms-transition: box-shadow 0.5s;
+	-webkit-box-shadow: 0 0 0.1em rgba(0,0,0, 0.8);
+	box-shadow: 0 0 0.1em rgba(0,0,0, 0.8);
+	-webkit-border-radius: 0.7em;
+	-o-border-radius: 0.7em;
+	border-radius: 0.7em;
+}
+
+#portfolio ul li a img{
+	width:100%;
 }
 #portfolio ul li a:visited {
-	border: 5px solid #680047;
+	border-color: #680047;
 }
 #portfolio ul li a:hover {
-	border: 5px solid #680047;
-	box-shadow: 0px 0px 5px rgba(0,0,0, 0.8);
-	-moz-box-shadow: 0px 0px 5px rgba(0,0,0, 0.8);
-	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0, 0.8);
-	-ms-box-shadow: 0px 0px 5px rgba(0,0,0, 0.8);
+	border-color: #680047;
+	-webkit-box-shadow: 0px 0px  0.5em rgba(0,0,0, 0.8);
+	box-shadow: 0px 0px  0.5em rgba(0,0,0, 0.8);
 }
+
 #portfolio ul li a:active {
-	border: 5px solid #000;
+	border-color: #000;
 }
 
 
@@ -391,13 +378,13 @@ aside ul li {
 }
 #contactme, #connect {
 	float: left;
-	width: 465px
+	width: 48.4375%; /*465px */
 }
 #connect {
-	margin-left: 30px;
+	margin-left: 3.01204819277%;
 }
 #contact h4 {
-	margin: 0px;
+	margin: 0;
 	margin-bottom: 10px;
 	font-size: 3em;
 	background-color: #a1c6ca;
@@ -408,8 +395,8 @@ aside ul li {
 	list-style: none;
 }
 #contact ul li {
-	padding: 5px 0px;
-	border-bottom: 1px dotted #a1c6ca;
+	padding: 1.075268817204%;
+	border-bottom: 0.08em dotted #a1c6ca;
 }
 
 
@@ -420,11 +407,169 @@ aside ul li {
 	background-color: rgba(0,0,0, 0.9);
 	font-size: 0.8em;
 	text-align: center;
-	padding: 5px;
+	padding: 0.520833333333%;
 	color: #999;
 	clear: both;
 }
 #footer a:link {
 	color: #ccc;
 	text-decoration: underline;
+}
+
+
+
+/* ----------------------------------------------------*/
+/* MEDIA QUERIES -------------------------------------*/
+/* ----------------------------------------------------*/
+
+/* Tablet Portrait size to standard 960 */
+@media screen and (min-width:768px) and (max-width:959px){
+	.container {
+	max-width: 768px;
+	padding: 3.90625%; /* 30px */
+	}
+	nav ul {
+	width: 65.104166666667%; /* 500px */
+	}
+	
+	#portfolio ul li a {
+		height: 95px;
+	}
+	
+	.ctaButton {
+	width: 19.53125%; /*150px */
+	}
+
+
+
+
+}
+
+
+
+
+
+/* Mobile Landscape to Tablet Portrait size */
+@media screen and (min-width:480px) and (max-width:767px){
+
+	.ctaButton {
+		width: 31.25%; /*150px */
+	}
+	
+	
+	nav ul li {
+		display:inline-block;
+		margin:0 1.041666666667%;
+		
+	}
+	
+	nav ul li a:hover{
+		color: #fff;
+		background: rgba(60, 0, 40, 0.9);	
+	}
+	
+	#portfolio ul li {
+		width:47.916666666667%;
+		margin:1.041666666667%;
+		max-height: 120px;
+	}
+	
+	#contactme, #connect {
+		clear:left;
+		margin-left:0;
+		width: 100%;
+		margin-bottom: 3em;
+	}
+	
+
+	#cta h1, #cta h1 span {
+		font-size: 1.4em;
+	}
+}
+
+
+
+
+
+/* Mobile Portrait to Mobile Landscape size */
+@media screen and (max-width:479px){
+	
+	body{
+		background: #ffefec url("../images/ricepaper.png") top left fixed;/* removed flower background */
+	}
+	.ctaButton {
+		width: 60%;
+		max-width:150px;
+	}
+	
+	nav ul li {
+		display:block;
+		clear:left;
+		margin:0 1.041666666667%;
+		
+	}
+	nav ul li a{
+	width:96%;
+	background: rgba(161, 192, 202, 0.7);
+	margin:0.1em 0;
+	-webkit-border-radius:1em;
+	-o-border-radius:1em;
+	border-radius:1em;
+	
+	}
+	
+	nav ul li a:hover{
+		color: #fff;
+		background: rgba(60, 0, 40, 0.9);	
+	}
+	
+	#portfolio ul li {
+		width:95.833333333334%;
+		margin:1.041666666667%;
+		height: 200px;
+	}
+
+
+	#cta h1, #cta h1 span {
+		font-size: 1.2em;
+	}
+	
+	
+	img.profilephoto {
+	display:none; /* as per rubric - removing presentational graphics and icons -  */
+	}
+
+}
+
+
+/* These are common rules from the smallest to 767px - 
+so we don't have to write them in twice */
+@media screen and (max-width:767px){
+	
+	.container {
+		max-width: 479px;
+		padding: 6.25%; /* 30px */
+	}
+	
+	#logo{
+		position:relative;
+		width:97.8%;
+		background-position:center center;
+		
+	}
+	.articles, article, aside, nav ul {
+		clear:both;
+		width: 100%;
+	}
+	
+	nav ul {
+		text-align:center;
+	}	
+	#contactme, #connect {
+		clear:left;
+		margin-left:0;
+		width: 100%;
+		margin-bottom: 3em;
+	}
+	
 }
