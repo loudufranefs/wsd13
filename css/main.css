@@ -92,6 +92,12 @@ section h3 small:before {
 
 #header {
 	background: #a1c6ca;
+	background: -moz-linear-gradient(top,  #a1c6ca 68%, #75a0a3 97%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(68%,#a1c6ca), color-stop(97%,#75a0a3));
+	background: -webkit-linear-gradient(top,  #a1c6ca 68%,#75a0a3 97%);
+	background: -o-linear-gradient(top,  #a1c6ca 68%,#75a0a3 97%);
+	background: -ms-linear-gradient(top,  #a1c6ca 68%,#75a0a3 97%);
+	background: linear-gradient(to bottom,  #a1c6ca 68%,#75a0a3 97%);
 	min-height: 50px;
 }
 #logo {
@@ -175,25 +181,29 @@ nav ul li a:hover {
 	font-size: 2em; /* 32px */
 	line-height: 4.6875em; /* 150px; */
 	text-align: center;
-	background-color: #680047;
+	background: #680047;
+	background: -moz-linear-gradient(top,  #680047 0%, #930062 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#680047), color-stop(100%,#930062));
+	background: -webkit-linear-gradient(top,  #680047 0%,#930062 100%);
+	background: -o-linear-gradient(top,  #680047 0%,#930062 100%);
+	background: -ms-linear-gradient(top,  #680047 0%,#930062 100%);
+	background: linear-gradient(to bottom,  #680047 0%,#930062 100%);
 	-webkit-border-radius: 100%; /* older safari */
 	-o-border-radius: 100%; /* opera */
 	border-radius: 100%;
 	border: 0.2em solid #ffefec; /* 3px */
-	-webkit-transition: all 0.5s ease-in-out;  /* Safari and Chrome */
-	-ms-transition: all 0.5s ease-in-out; /* Internet Explorer */
-	transition: width 0.5s ease-in-out, margin 0.5s linear;
 	-webkit-box-shadow: 0 0 10.6802721088435em #fff;/* Safari and Chrome */
 	box-shadow: 0 0 0.6802721088435em #fff; /* 10px */
 }
 .ctaButton a:hover {
-	text-decoration: none;
-	margin-left: -8.333333333333%; /* 15px */
-	margin-top: -8.333333333333%; /* 15px */
-	width: 120%; /*180px */;
-	height: 120%; /*180px */;
-	line-height: 5.625em; /* 150px; */
-	background-color: #45002f;
+	text-decoration: none;background: #930062;
+	background: -moz-radial-gradient(center, ellipse cover,  #930062 33%, #680047 80%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(33%,#930062), color-stop(80%,#680047));
+	background: -webkit-radial-gradient(center, ellipse cover,  #930062 33%,#680047 80%);
+	background: -o-radial-gradient(center, ellipse cover,  #930062 33%,#680047 80%);
+	background: -ms-radial-gradient(center, ellipse cover,  #930062 33%,#680047 80%);
+	background: radial-gradient(ellipse at center,  #930062 33%,#680047 80%);
+
 }
 
 
